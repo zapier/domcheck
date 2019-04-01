@@ -2,10 +2,10 @@ Domcheck: Domain Ownership Validation
 =====================================
 
 .. image:: https://img.shields.io/pypi/v/domcheck.svg
-    :target: https://pypi.python.org/pypi/domcheck
+    :target: https://pypi.zapier.org/pypi/domcheck
 
 .. image:: https://travis-ci.org/rs/domcheck.svg?branch=master
-    :target: https://travis-ci.org/rs/domcheck
+    :target: https://travis-ci.com/zapier/domcheck
 
 This Python library implements different strategies to validate the ownership of a domain name.
 
