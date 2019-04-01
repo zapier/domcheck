@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import sys
-
 try:
     from setuptools import setup
 except ImportError:
@@ -10,10 +8,7 @@ except ImportError:
 with open('README.rst', 'r') as f:
     readme = f.read()
 
-if sys.version_info >= (3, 2):
-    install_requires = ["dnspython3 >= 1.12.0"]
-else:
-    install_requires = ["dnspython >= 1.12.0"]
+install_requires = ["dnspython >= 1.12.0"]
 
 setup(
     name='domcheck',

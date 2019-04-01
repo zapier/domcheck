@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import dns.resolver
-import re
 import logging
+import re
+
+import dns.resolver
+
 logger = logging.getLogger(__name__)
 
 try:
@@ -25,7 +27,7 @@ def check_dns_txt(domain, prefix, code):
         for rr in dns.resolver.query(domain, 'TXT'):
             if token in rr.to_text():
                 return True
-    except:
+    except Exception:
         logger.debug('', exc_info=True)
     return False
 
@@ -43,7 +45,7 @@ def check_dns_cname(domain, prefix, code):
         for rr in dns.resolver.query(fqdn, 'CNAME'):
             if rr.to_text().startswith(prefix + '.'):
                 return True
-    except:
+    except Exception:
         logger.debug('', exc_info=True)
     return False
 
@@ -81,7 +83,7 @@ def check_meta_tag(domain, prefix, code):
                 return search_meta_tag(content, prefix, code)
             else:
                 res.close()
-        except:
+        except Exception:
             logger.debug('', exc_info=True)
     return False
 
@@ -108,6 +110,6 @@ def check_html_file(domain, prefix, code):
                     return True
             else:
                 res.close()
-        except:
-             logger.debug('', exc_info=True)
+        except Exception:
+            logger.debug('', exc_info=True)
     return False
