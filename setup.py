@@ -12,7 +12,7 @@ install_requires = ["dnspython >= 1.12.0"]
 
 setup(
     name='domcheck',
-    version='1.1.4.zapier',
+    version='1.1.4.post1',
     description='Domain Ownership Checker',
     long_description=readme,
     author='Olivier Poitrey',
